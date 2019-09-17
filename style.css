@@ -23,7 +23,7 @@
   header .menu-burger
   {
     height: 100%;
-    width: 20px;
+    width: 30px;
     padding: 10px;
     align-items: center;
   }
@@ -59,9 +59,26 @@
     font-size: 1.4rem;
   }
 
-  @media screen and (max-width: 50px){
+  @media screen and (max-width: 1000px){
       .item{
           width: 100%;
       }
   }
 
+header nav{
+  position: fixed;
+  background-color: burlywood;
+  height: 100vh;
+  width: 200px;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+  transform: translateX(-200px);
+  transition: transform 0.3s ease;
+}
+
+header nav.active {
+  transform: translateX(0);
+}
